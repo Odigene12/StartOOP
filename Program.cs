@@ -5,6 +5,7 @@ namespace StartOOP
 {
     public class Program
     {
+        // Main is an Entry Point (An entry point is a door that is used to begin the project)
         public static void Main(string[] args)
         {
            Console.WriteLine("Starting Program...");
@@ -25,6 +26,10 @@ namespace StartOOP
            Console.WriteLine("The Cat said: " + my_cat.meow());
            Console.WriteLine("The Cat said: " + my_cat.meow(2));
            Console.WriteLine("The Cat said: " + my_cat.meow(-5));
+
+           //my_cat.purr(); // Cannot be called outside of the Cat class due to the "purr" method being private.
+           Console.WriteLine("Then the Cat said: " + my_cat.meowThenPurr();
+          // my_cat.swim(); //Swing method is protected and cannot be used outside of the Cat, Dog and Animal classes 
 
            Console.WriteLine("Ending Program...");
         }

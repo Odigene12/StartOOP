@@ -9,6 +9,14 @@ namespace Zoo
             // virtual allows behaviors or methods to be redefined by children
             return null; // "null" can serve as a do-nothing placeholder for any type
         }
+
+        private string respiration() { // Children can not use this
+            return "breath!";
+        }
+
+        protected string swim(){ // Similar to a family secret. Children CAN use this.
+            return "Swoosh";
+        }
     }
 
     public class Dog : Animal { // How to inherit behavior from Animal (See the ":")
@@ -24,6 +32,14 @@ namespace Zoo
         // Ad-hoc Polymorphism same method, different argument types.
         public string meow() {
             return "meow!";
+        }
+
+        private string purr() { // Private methods can on be used from within a class.
+            return "purr!";
+        }
+
+        public string meowThenPurr(){
+            return this.meow() + " " + this.purr();
         }
 
         public string meow(int number_of_pets) { // This method is called "Overloading". We've OVERLOADED the "meow" method
